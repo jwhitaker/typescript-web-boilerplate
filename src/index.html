@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="x-ua-compatible" content="ie=edge" />
+      <title>Typescript Boilerplate</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+      <script src="jspm_packages/system.js"></script>
+      <script src="config.js"></script>
+      <script>
+        System.config({
+            packages: {
+                "app": { defaultExtension: "js" }
+            }
+        });
+
+        System.import("app/Main").then(function(m) {
+            m.main(document.body);
+        });
+      </script>
+</html>

@@ -1,0 +1,37 @@
+{
+  "name": "typescript-web-boilerplate",
+  "version": "1.0.0",
+  "description": "A starting point for a web-based typescript with SASS and Bootstrap project",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:jwhitaker/typescript-web-boilerplate.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "jspm": "jspm install",
+    "tsd": "tsd install",
+    "postinstall": "npm run jspm & npm run tsd",
+    "dev": "gulp dev",
+    "build:release": "gulp build:release",
+    "clean:build": "gulp clean:build",
+    "clean:install": "gulp clean:install",
+    "clean:all": "gulp clean:all"
+  },
+  "keywords": ["TypeScript", "SASS", "Bootstrap"],
+  "author": "Jason Whitaker <jason@thewhitakers.ca>",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.0",
+    "gulp-sequence": "^0.4.1",
+    "gulp-typescript": "^2.10.0",
+    "gulp-webserver": "^0.9.1",
+    "jspm": "^0.16.15",
+    "merge2": "^0.3.6",
+    "tsd": "^0.6.5",
+    "typescript": "^1.7.3"
+  },
+  "jspm": {
+    "devDependencies": {}
+  }
+}
