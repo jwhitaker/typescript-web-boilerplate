@@ -1,5 +1,7 @@
 # typescript-boilerplate
 
+Boilerplate code for a typescript web project using JSPM and gulp.
+
 ## Getting Started
 
 To get started execute:
