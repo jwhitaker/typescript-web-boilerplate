@@ -17,7 +17,11 @@
     "clean:install": "gulp clean:install",
     "clean:all": "gulp clean:all"
   },
-  "keywords": ["TypeScript", "SASS", "Bootstrap"],
+  "keywords": [
+    "TypeScript",
+    "SASS",
+    "Bootstrap"
+  ],
   "author": "Jason Whitaker <jason@thewhitakers.ca>",
   "license": "ISC",
   "devDependencies": {

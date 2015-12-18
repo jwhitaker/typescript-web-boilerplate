@@ -1,6 +1,6 @@
 System.config({
   baseURL: "/",
   defaultJSExtensions: true,
-  transpiler: "none",
+  transpiler: false,
   paths: {}
 });
