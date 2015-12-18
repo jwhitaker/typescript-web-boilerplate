@@ -1,4 +1,4 @@
-# typescript-boilerplate
+# typescript-web-boilerplate
 
 Boilerplate code for a typescript web project using JSPM and gulp.
 
