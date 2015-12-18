@@ -10,7 +10,9 @@ var config = {
         source: "./src/**/*.ts",
         vendor: ["./jspm_packages/**/*", "./config.js"],
         build: "./build",
-        build_debug: "./build/debug"
+        build_debug: "./build/debug",
+        styles: "./src/styles/**/*.scss",
+        styles_build_debug: "./build/debug/styles"
     }
 };
 
@@ -29,11 +31,13 @@ gulp.task("vendor", getTask("vendor"));
 gulp.task("templates", getTask("templates"));
 
 gulp.task("compile:source", getTask("compile-source"));
+gulp.task("compile:styles", getTask("compile-styles"));
 
 gulp.task("webserver", getTask("webserver"));
 
-gulp.task("watch", ["compile:source", "templates"], function() {
+gulp.task("watch", ["compile:source", "compile:styles", "templates"], function() {
     gulp.watch(config.paths.source, ["compile:source"]);
+    gulp.watch(config.paths.styles, ["compile:styles"]);
     gulp.watch(config.paths.views, ["templates"]);
 });
 

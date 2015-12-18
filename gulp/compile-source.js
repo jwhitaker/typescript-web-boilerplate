@@ -1,7 +1,7 @@
 var ts = require("gulp-typescript"),
     merge = require("merge2");
 
-var tsProject = ts.createProject("./src/tsconfig.json");
+var tsProject = ts.createProject("./src/app/tsconfig.json");
 
 module.exports = function(gulp, config, options) {
     return function() {
@@ -9,7 +9,6 @@ module.exports = function(gulp, config, options) {
             .pipe(ts(tsProject));
 
         return merge([
-            tsResult.dts.pipe(gulp.dest("./typings/project/")),
             tsResult.js.pipe(gulp.dest(config.paths.build_debug))
         ]);
     };
