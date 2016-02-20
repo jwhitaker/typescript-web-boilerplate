@@ -5,7 +5,7 @@ var gulp = require("gulp"),
     paths = require("../../paths");
 
 gulp.task("templates", function() {
-    gulp.src(paths.templates.source)
+    return gulp.src(paths.templates.source)
         .pipe(gulp.dest(paths.templates.output))
         .pipe(browserSync.default.stream({ once: true }));
 });
