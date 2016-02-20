@@ -1,48 +1,16 @@
+"use strict";
+
 var gulp = require("gulp"),
+    requireDir = require("require-dir"),
     gulpSequence = require("gulp-sequence");
 
-var config = {
-    paths: {
-        node_modules: "./node_modules",
-        jspm_packages: "./jspm_packages",
-        typings: "./typings",
-        views: "./src/**/*.html",
-        source: "./src/**/*.ts",
-        vendor: ["./jspm_packages/**/*", "./config.js"],
-        build: "./build",
-        build_debug: "./build/debug",
-        styles: "./src/styles/**/*.scss",
-        styles_build_debug: "./build/debug/styles"
-    }
-};
+requireDir("./gulp/tasks", { recurse: true });
 
-function getTask(file, options) {
-    return require("./gulp/" + file)(gulp, config, options);
-}
+gulp.task("build", gulpSequence(
+    "clean",
+    ["sass", "vendor", "templates", "ts"]
+));
 
-gulp.task("clean:build", getTask("clean", { paths: [config.paths.build] }));
+gulp.task("build:dev", ["serve"]);
 
-gulp.task("clean:install", getTask("clean", { paths: [config.paths.node_modules, config.paths.jspm_packages, config.paths.typings]}));
-
-gulp.task("clean:all", ["clean:build", "clean:install"]);
-
-gulp.task("vendor", getTask("vendor"));
-
-gulp.task("templates", getTask("templates"));
-
-gulp.task("compile:source", getTask("compile-source"));
-gulp.task("compile:styles", getTask("compile-styles"));
-
-gulp.task("webserver", getTask("webserver"));
-
-gulp.task("watch", ["compile:source", "compile:styles", "templates"], function() {
-    gulp.watch(config.paths.source, ["compile:source"]);
-    gulp.watch(config.paths.styles, ["compile:styles"]);
-    gulp.watch(config.paths.views, ["templates"]);
-});
-
-gulp.task("dev", gulpSequence("clean:build", "watch", "vendor", "webserver"));
-
-gulp.task("build:release", gulpSequence("clean:build", ["compile:source", "templates", "vendor"]));
-
-gulp.task("default", ["build:release"]);
+gulp.task("default", ["app"]);

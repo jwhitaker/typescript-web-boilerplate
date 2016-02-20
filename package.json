@@ -9,13 +9,11 @@
   "main": "index.js",
   "scripts": {
     "jspm": "jspm install",
-    "tsd": "tsd install",
-    "postinstall": "npm run jspm & npm run tsd",
-    "dev": "gulp dev",
-    "build:release": "gulp build:release",
-    "clean:build": "gulp clean:build",
-    "clean:install": "gulp clean:install",
-    "clean:all": "gulp clean:all"
+    "typings": "typings install",
+    "postinstall": "npm run jspm & npm run typings",
+    "clean": "gulp clean",
+    "build": "gulp build",
+    "build:dev": "gulp build:dev"
   },
   "keywords": [
     "TypeScript",
@@ -25,16 +23,22 @@
   "author": "Jason Whitaker <jason@thewhitakers.ca>",
   "license": "ISC",
   "devDependencies": {
+    "browser-sync": "^2.6.0",
     "del": "^2.2.0",
-    "gulp": "^3.9.0",
-    "gulp-sass": "^2.1.1",
-    "gulp-sequence": "^0.4.1",
-    "gulp-typescript": "^2.10.0",
-    "gulp-webserver": "^0.9.1",
-    "jspm": "^0.16.15",
-    "merge2": "^0.3.6",
-    "tsd": "^0.6.5",
-    "typescript": "^1.7.3"
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.2.0",
+    "gulp-sass-lint": "^1.1.1",
+    "gulp-sequence": "^0.4.4",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-tsconfig-files": "^0.2.5",
+    "gulp-tslint": "^4.3.2",
+    "gulp-typescript": "^2.11.0",
+    "gulp-util": "^3.0.7",
+    "jspm": "^0.16.27",
+    "require-dir": "^0.3.0",
+    "tslint": "^3.3.0",
+    "typescript": "^1.7.5",
+    "typings": "^0.6.8"
   },
   "jspm": {
     "dependencies": {

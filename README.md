@@ -7,7 +7,7 @@ Boilerplate code for a typescript web project using JSPM and gulp.
 To get started execute:
 
 ```bash
-run npm install
+npm install
 ```
 
  This will install the required node modules, install the jspm packages and install the typescript definitions.
@@ -21,38 +21,27 @@ npm run jspm
 To install the typescript definitions
 
 ```bash
-npm run tsd
+npm run typings
 ```
 
 ## Building
 
-To build in developer mode (This will watch for source code changes)
+To build without watching for changes:
 
 ```bash
-npm run dev
+npm run build
 ```
 
-To build the code without watching for changes:
+To build while watching for changes and reloading browsers:
 
 ```bash
-npm run build:release
+npm run build:dev
 ```
 
 ## Workspace Cleaning
 
-To clean the build files:
+To clean the distribution directory:
 
 ```bash
-npm run clean:build
-```
-
-To clean installed files (npm, jspm):
-
-```bash
-npm run clean:install
-```
-
-To clean everything above:
-```bash
-npm run clean:all
+npm run clean
 ```

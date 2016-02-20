@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "module": "system",
+    "sourceMap": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "outDir": "dist/app"
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "filesGlob": [
+    "src/**/*.ts",
+    "typings/browser.d.ts"
+  ],
+  "files": [
+    "src/app/Main.ts",
+    "src/app/main/IMessageService.ts",
+    "src/app/main/MessageService.ts",
+    "typings/browser.d.ts"
+  ],
+  "atom": {
+    "rewriteTsconfig": true
+  }
+}
