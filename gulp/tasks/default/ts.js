@@ -18,14 +18,15 @@ gulp.task("ts:tsconfig", function() {
 
 gulp.task("ts:tslint", ["ts:tsconfig"], function() {
     return gulp.src(paths.ts.source)
-        .pipe(tslint())
-        .pipe(tslint.report("verbose"));
+        .pipe(tslint({
+            formatter: "verbose"
+        }));
 });
 
 gulp.task("ts", ["ts:tslint"], function() {
     return gulp.src([paths.ts.source, paths.ts.typings])
         .pipe(sourcemaps.init())
-        .pipe(ts(tsProject))
+        .pipe(tsProject())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(paths.ts.output))
         .pipe(browserSync.default.stream({ once: true }));

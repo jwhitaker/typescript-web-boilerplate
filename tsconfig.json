@@ -9,18 +9,16 @@
     "noImplicitAny": false,
     "outDir": "dist/app"
   },
-  "exclude": [
-    "node_modules"
-  ],
   "filesGlob": [
     "src/**/*.ts",
-    "typings/browser.d.ts"
+    "node_modules/@types/**/*.d.ts"
   ],
   "files": [
+    "node_modules/@types/bootstrap/index.d.ts",
+    "node_modules/@types/jquery/index.d.ts",
     "src/app/Main.ts",
     "src/app/main/IMessageService.ts",
-    "src/app/main/MessageService.ts",
-    "typings/browser.d.ts"
+    "src/app/main/MessageService.ts"
   ],
   "atom": {
     "rewriteTsconfig": true
