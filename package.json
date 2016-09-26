@@ -9,8 +9,7 @@
   "main": "index.js",
   "scripts": {
     "jspm": "jspm install",
-    "typings": "typings install",
-    "postinstall": "npm run jspm & npm run typings",
+    "postinstall": "npm run jspm",
     "clean": "gulp clean",
     "build": "gulp build",
     "build:dev": "gulp build:dev"
@@ -23,27 +22,28 @@
   "author": "Jason Whitaker <jason@thewhitakers.ca>",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.6.0",
-    "del": "^2.2.0",
+    "@types/bootstrap": "^3.3.32",
+    "@types/jquery": "^2.0.32",
+    "browser-sync": "^2.16.0",
+    "del": "^2.2.2",
     "gulp": "^3.9.1",
-    "gulp-sass": "^2.2.0",
-    "gulp-sass-lint": "^1.1.1",
-    "gulp-sequence": "^0.4.4",
+    "gulp-sass": "^2.3.2",
+    "gulp-sass-lint": "^1.2.0",
+    "gulp-sequence": "^0.4.6",
     "gulp-sourcemaps": "^1.6.0",
-    "gulp-tsconfig-files": "^0.2.5",
-    "gulp-tslint": "^4.3.2",
-    "gulp-typescript": "^2.11.0",
+    "gulp-tsconfig-files": "^0.4.0",
+    "gulp-tslint": "^6.1.1",
+    "gulp-typescript": "^3.0.1",
     "gulp-util": "^3.0.7",
-    "jspm": "^0.16.27",
+    "jspm": "^0.16.45",
     "require-dir": "^0.3.0",
-    "tslint": "^3.3.0",
-    "typescript": "^1.7.5",
-    "typings": "^0.6.8"
+    "tslint": "^3.15.1",
+    "typescript": "^2.0.3"
   },
   "jspm": {
     "dependencies": {
-      "bootstrap": "github:twbs/bootstrap@^3.3.6",
-      "css": "github:systemjs/plugin-css@^0.1.20"
+      "bootstrap": "github:twbs/bootstrap@^3.3.7",
+      "css": "github:systemjs/plugin-css@^0.1.29"
     },
     "devDependencies": {}
   }

@@ -3,14 +3,15 @@ System.config({
   defaultJSExtensions: true,
   transpiler: false,
   paths: {
-    "github:*": "jspm_packages/github/*"
+    "github:*": "jspm_packages/github/*",
+    "npm:*": "jspm_packages/npm/*"
   },
 
   map: {
-    "bootstrap": "github:twbs/bootstrap@3.3.6",
-    "css": "github:systemjs/plugin-css@0.1.20",
-    "github:twbs/bootstrap@3.3.6": {
-      "jquery": "github:components/jquery@2.1.4"
+    "bootstrap": "github:twbs/bootstrap@3.3.7",
+    "css": "github:systemjs/plugin-css@0.1.29",
+    "github:twbs/bootstrap@3.3.7": {
+      "jquery": "npm:jquery@3.1.1"
     }
   }
 });

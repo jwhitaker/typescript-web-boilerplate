@@ -9,7 +9,7 @@ module.exports = {
     dist: dist,
     ts: {
         source: root + "/src/**/*.ts",
-        typings: root + "/typings/browser.d.ts",
+        typings: root + "/node_modules/@types/**/*.d.ts",
         output: dist
     },
     templates: {
