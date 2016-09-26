@@ -19,7 +19,7 @@ gulp.task("ts", ["ts:tslint"], function() {
     var tsResult = tsProject.src() // instead of gulp.src(...)
         .pipe(sourcemaps.init())
         .pipe(tsProject());
-    
+
     return tsResult.js
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(paths.ts.output))
