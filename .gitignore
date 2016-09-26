@@ -1,6 +1,4 @@
-jspm_packages
-node_modules
-build
-npm-debug.log
-typings
-.idea
+jspm_packages/
+node_modules/
+.idea/
+dist/
