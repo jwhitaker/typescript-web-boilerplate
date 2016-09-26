@@ -9,8 +9,7 @@ module.exports = {
     dist: dist,
     ts: {
         source: root + "/src/**/*.ts",
-        typings: root + "/node_modules/@types/**/*.d.ts",
-        output: dist
+        output: dist + "/app"
     },
     templates: {
         source: root + "/src/**/*.html",
