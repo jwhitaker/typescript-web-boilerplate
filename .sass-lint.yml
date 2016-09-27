@@ -1,18 +1,11 @@
-#########################
-## Sample Sass Lint File
-#########################
-# Linter Options
 options:
-  # Don't merge default rules
-  merge-default-rules: false
-  # Set the formatter to 'html'
   formatter: stylish
-# File Options
+
+
 files:
-  include: 'sass/**/*.s+(a|c)ss'
-  ignore:
-    - 'sass/vendor/**/*.*'
-# Rule Configuration
+  include: 'src/**/*.s+(a|c)ss'
+
+
 rules:
   extends-before-mixins: 2
   extends-before-declarations: 2
@@ -23,7 +16,6 @@ rules:
       exclude:
         - breakpoint
         - mq
-
   no-warn: 1
   no-debug: 1
   no-ids: 2

@@ -1,26 +1,8 @@
 {
   "compilerOptions": {
-    "target": "ES5",
-    "module": "system",
-    "sourceMap": false,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "removeComments": false,
-    "noImplicitAny": false,
-    "outDir": "dist/app"
-  },
-  "filesGlob": [
-    "src/**/*.ts",
-    "node_modules/@types/**/*.d.ts"
-  ],
-  "files": [
-    "node_modules/@types/bootstrap/index.d.ts",
-    "node_modules/@types/jquery/index.d.ts",
-    "src/app/Main.ts",
-    "src/app/main/IMessageService.ts",
-    "src/app/main/MessageService.ts"
-  ],
-  "atom": {
-    "rewriteTsconfig": true
+    "target": "es5",
+    "sourceMap": true,
+    "jsx": "react",
+    "experimentalDecorators": true
   }
 }
