@@ -29,7 +29,7 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Home</a></li>
                     </ul>
-                </div><!--/.nav-collapse -->
+                </div>
             </div>
         </nav>
 
@@ -38,19 +38,9 @@
                 <h1>Typescript Web Boilerplate</h1>
                 <p class="lead" id="injected-content"></p>
             </div>
-        </div><!-- /.container -->
+        </div>
 
-        <script src="jspm_packages/system.js"></script>
-        <script src="config.js"></script>
-
-        <script>
-        System.import("./styles/main.css!");
-        System.import("bootstrap/css/bootstrap-theme.css!");
-        System.import("bootstrap/css/bootstrap.css!");
-
-        System.import("./app/Main").then(function(m) {
-            m.main(document.body);
-        });
-        </script>
+        <script src="/dist/vendor.bundle.js"></script>
+        <script src="/dist/bundle.js"></script>
     </body>
 </html>

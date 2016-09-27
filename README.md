@@ -1,6 +1,6 @@
 # typescript-web-boilerplate
 
-Boilerplate code for a typescript web project using JSPM and gulp.
+Boilerplate code for a typescript web project using webpack.
 
 ## Getting Started
 
@@ -10,32 +10,18 @@ To get started execute:
 npm install
 ```
 
- This will install the required node modules, install the jspm packages and install the typescript definitions.
-
-To install the jspm packages:
-
-```bash
-npm run jspm
-```
-
-To install the typescript definitions
-
-```bash
-npm run typings
-```
-
 ## Building
 
-To build without watching for changes:
+To run in dev mode run:
 
 ```bash
-npm run build
+npm run dev
 ```
 
-To build while watching for changes and reloading browsers:
+To create a production build:
 
 ```bash
-npm run build:dev
+npm run prod
 ```
 
 ## Workspace Cleaning
