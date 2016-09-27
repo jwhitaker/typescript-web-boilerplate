@@ -5,7 +5,7 @@ var Webpack = require("webpack"),
     path = require("path"),
     nodeModulesPath = path.resolve(__dirname, "node_modules"),
     buildPath = path.resolve(__dirname, "dist"),
-    mainPath = path.resolve(__dirname, "src", "app", "main.ts");
+    mainPath = path.resolve(__dirname, "src", "app", "app.tsx");
 
 module.exports = {
     entry: {
@@ -51,7 +51,7 @@ module.exports = {
     },
 
     tslint: {
-        emitErrors: true,
-        failOnHint: true
+        emitErrors: false,
+        failOnHint: false
     }
-}
+};
