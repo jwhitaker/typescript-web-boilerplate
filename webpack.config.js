@@ -10,7 +10,7 @@ var Webpack = require("webpack"),
 module.exports = {
     entry: {
         app: mainPath,
-        vendor: ["jquery", "bootstrap-sass"]
+        vendor: ["jquery", "bootstrap-sass", "react", "react-dom", "redux", "react-redux"]
     },
 
     output: {
