@@ -5,12 +5,12 @@ var Webpack = require("webpack"),
     path = require("path"),
     nodeModulesPath = path.resolve(__dirname, "node_modules"),
     buildPath = path.resolve(__dirname, "dist"),
-    mainPath = path.resolve(__dirname, "src", "app", "main.ts");
+    mainPath = path.resolve(__dirname, "src", "app", "main.tsx");
 
 module.exports = {
     entry: {
         app: mainPath,
-        vendor: ["jquery", "bootstrap-sass"]
+        vendor: ["jquery", "bootstrap-sass", "react", "react-dom", "redux", "react-redux"]
     },
 
     output: {
@@ -54,4 +54,4 @@ module.exports = {
         emitErrors: true,
         failOnHint: true
     }
-}
+};

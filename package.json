@@ -22,6 +22,10 @@
   "devDependencies": {
     "@types/bootstrap": "^3.3.32",
     "@types/jquery": "^2.0.32",
+    "@types/react": "^0.14.37",
+    "@types/react-dom": "^0.14.17",
+    "@types/react-redux": "^4.4.32",
+    "@types/redux": "^3.5.30",
     "bootstrap-sass": "^3.3.7",
     "css-loader": "^0.25.0",
     "del-cli": "^0.2.0",
@@ -39,6 +43,10 @@
     "webpack-dev-server": "^1.16.1"
   },
   "dependencies": {
-    "jquery": "^3.1.1"
+    "jquery": "^3.1.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
+    "redux": "^3.6.0"
   }
 }
