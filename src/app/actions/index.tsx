@@ -10,9 +10,9 @@ export type INCR_ACTION = {
 
 export const clickIncrement = function (incr: number): Action<INCR_ACTION> {
     return {
-        type: INCR_ACTION,
         payload: {
             by: incr
-        }
+        },
+        type: INCR_ACTION
     };
 };
