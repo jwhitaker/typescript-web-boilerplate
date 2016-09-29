@@ -4,15 +4,15 @@ import "../styles/main.scss";
 import * as React from "react";
 import {createStore} from "redux";
 import {Provider} from "react-redux";
-import * as ReactDOM from "react-dom";
+import {render} from "react-dom";
+import counterApp from "./reducers";
+import App from "./components/App";
 
-import {Counter, reducer} from "./components/Counter";
 
+let store = createStore(counterApp);
 
-let store = createStore(reducer);
-
-ReactDOM.render(
+render(
     <Provider store={store}>
-        <Counter />
+        <App />
     </Provider>,
     document.getElementById("injected-content"));
