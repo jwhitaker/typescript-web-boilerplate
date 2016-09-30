@@ -7,7 +7,7 @@
     "url": "git@github.com:jwhitaker/typescript-web-boilerplate.git"
   },
   "scripts": {
-    "dev": "npm run clean && webpack-dev-server --inline",
+    "dev": "npm run clean && webpack-dev-server --inline --hot",
     "prod": "npm run clean && webpack -p",
     "clean": "del-cli dist"
   },
